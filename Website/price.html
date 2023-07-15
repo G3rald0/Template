@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Price Calculator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="calculator">
+		<h2>Digital Printing Price Calculator</h2>
+		<form>
+			<label for="quantity">Quantity:</label>
+			<input type="number" id="quantity" name="quantity" value="1" min="1" required><br><br>
+			
+			<label for="size">Size:</label>
+			<select id="size" name="size" required>
+				<option value="">Select a size</option>
+				<option value="A4">A4 (210mm x 297mm)</option>
+				<option value="A3">A3 (297mm x 420mm)</option>
+				<option value="A2">A2 (420mm x 594mm)</option>
+				<option value="A1">A1 (594mm x 841mm)</option>
+			</select><br><br>
+			
+			<label for="color">Color:</label>
+			<select id="color" name="color" required>
+				<option value="">Select a color</option>
+				<option value="Black and White">Black and White</option>
+				<option value="Color">Color</option>
+			</select><br><br>
+			
+			<label for="sides">Sides:</label>
+			<select id="sides" name="sides" required>
+				<option value="">Select a side</option>
+				<option value="Single-sided">Single-sided</option>
+				<option value="Double-sided">Double-sided</option>
+			</select><br><br>
+			
+			<button type="button" onclick="calculatePrice()">Calculate Price</button><br><br>
+			
+			<label for="price">Total Price:</label>
+			<input type="text" id="price" name="price" readonly><br><br>
+		</form>
+	</div>
+	
+	<script src="script.js"></script>
+</body>
+</html>
